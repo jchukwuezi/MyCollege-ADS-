@@ -56,9 +56,9 @@ public class LinkedList<T> implements LinkedListADT<T> {
         }
                      
 
-	   
 	    
-	
+	    
+	    
 	 // Deletes any object from the list where object is passed as parameter
 	public T remove(T element)
 	{
@@ -71,11 +71,13 @@ public class LinkedList<T> implements LinkedListADT<T> {
 			 previous = current;
 			 
 		 } //inside this loop current equals previous
-		
+	
+		 
 		if (current== null)
 		{
 			result = null;
 		}
+		
 		
 		else if (current == this.list)
 		 {
@@ -88,6 +90,7 @@ public class LinkedList<T> implements LinkedListADT<T> {
 		 {
 			 result = this.last.getElement();
 			 this.last = previous; //the last element now becomes the value of previous
+			 this.last.setNext(null); //what the last element was pointing to is now null
 			 count --;
 		 } //outside this loop if previous now becomes the last element and result is dereferenced
 		 
@@ -156,7 +159,15 @@ public class LinkedList<T> implements LinkedListADT<T> {
 	{
 		LinearNode<T> first = this.list;
 		
-		return (T) first;
+		return  first.getElement();
+	}
+	
+	
+	public LinearNode<T> getFirstNode() //returns the first node in the list
+	{
+		LinearNode<T> first = this.list;
+		
+		return  first;
 	}
 	
 	
@@ -166,8 +177,9 @@ public class LinkedList<T> implements LinkedListADT<T> {
 	{
 		LinearNode<T> last= this.last;
 		
-		return (T) last;
+		return last.getElement();
 	}
+	
 	
 	public T getNextGeneric(T element) //returns next generic object in the list, where the current object is passed in as a parameter
 	{
@@ -179,7 +191,7 @@ public class LinkedList<T> implements LinkedListADT<T> {
 	     
 	     nextGeneric = current.getNext();
 	     
-	     return (T) nextGeneric;
+	     return nextGeneric.getElement();
 	     
 	}	
 	

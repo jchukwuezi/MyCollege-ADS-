@@ -1,8 +1,9 @@
-     //************************************************************
-    //  LinearNode.java      
-    //
-    //  Represents a node in a linked list.
-    //************************************************************
+    //////////////////////////////////////////////////////////////  
+    // File name: LinearNode.java                               //
+    // Author: Joshua Chukwuezi                                 //
+    //Student Number: C18709101                                 //
+    // Descripiton of class: Represents a node in a linked list.//
+ 	//////////////////////////////////////////////////////////////
     
     package dataStructures;   
 

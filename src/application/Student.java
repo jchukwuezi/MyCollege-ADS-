@@ -28,7 +28,7 @@ public class Student {
 		this.courseCode=cc;
 		this.entryYear=ey;
 		
-		if (!(courseCode.substring(0,2).equalsIgnoreCase("DT"))) //if course code doesn't start with DT then it is set to error 
+		/*if (!(courseCode.substring(0,2).equalsIgnoreCase("DT"))) //if course code doesn't start with DT then it is set to error 
 				{
                        courseCode= "ERROR";		
                        
@@ -41,7 +41,7 @@ public class Student {
 			
 			System.out.println("entry year has been set to 0000 because it was after 2019/before 2013");
 		}
-		
+		*/
 		
 		
 		
@@ -158,23 +158,5 @@ public class Student {
 	
 	}
 	
-	public boolean checkCourseCode(Object otherObject) //method to compare course codes of students
-	{
-		boolean check = false;
-		
-		Student otherStudent = (Student) otherObject;
-		
-		if (this.courseCode.equalsIgnoreCase(otherStudent.getCourseCode()))
-		{
-			check = true;
-		}
-		
-		else
-			check = false;
-		
-		
-		return check;
- 		
-		
-	}
+	
 }
