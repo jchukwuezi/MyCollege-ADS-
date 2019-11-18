@@ -195,8 +195,27 @@ public class LinkedList<T> implements LinkedListADT<T> {
 	     
 	}	
 	
-
-	
+    
+	//method to reverse the linked list
+	public void reverse()
+	{ 
+		LinearNode<T> current = this.list; //setting current equals to the first node
+		LinearNode<T> next = this.list;
+		LinearNode<T> previous = null;   
+		
+		
+		while (current != null) { //all of this will be carried out while current != null
+			next = current.getNext(); 
+			current.setNext(previous); //current pointer will now point to previous node
+			previous = current; //previous is now pointing to whatever current is
+			current = next; //moving previous up to current 
+		}
+		
+		next=this.list; //setting next back to the first node
+		this.list=this.last; 
+		last=next; 
+			
+	}
 	
 	
 	

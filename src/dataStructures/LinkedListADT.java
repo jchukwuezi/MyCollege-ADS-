@@ -40,6 +40,7 @@ public interface LinkedListADT <T>
 	 //Returns next generic object in the list, where the current object is passed in as a parameter
 	   public T getNextGeneric(T element);
 	   
-	   //Still need to do part 2 and part 10 (including another function)
+	  //Reverses the linked list
+	   public void reverse();
 
 }

@@ -107,6 +107,7 @@ public class Student {
 	public boolean equals(Object otherObject) //comparing two students by student number
 	{
 		Student otherStudent = (Student) otherObject;
+		
 		boolean check = false;
 		
 		if (this.studentNumber.equalsIgnoreCase(otherStudent.getStudentNumber()))
